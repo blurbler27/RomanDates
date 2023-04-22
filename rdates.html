@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Tempus</title>
+<script src="roman-date.js"></script>
+</head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+
+
+
+<body>
+<h1>Hodie</h1>
+<p id="p1">
+Hodie est ...
+</p>
+
+<div>
+<a title="Bauglir, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Museo_del_Teatro_Romano_de_Caesaraugusta.43.jpg"><img width="512" alt="Museo del Teatro Romano de Caesaraugusta.43" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Museo_del_Teatro_Romano_de_Caesaraugusta.43.jpg/512px-Museo_del_Teatro_Romano_de_Caesaraugusta.43.jpg"></a>
+</div>
+
+
+
+<div>
+  Alium diem: <input type="datetime-local" id="newdate" value="2023-02-14T12:22">
+  <button onclick="age()">Age!</button>
+</div>
+
+<p id="p2">
+diem ...
+</p>
+
+
+
+
+<script>
+document.getElementById("p1").innerHTML = diesMensis(new Date());
+function age(){
+  document.getElementById("p2").innerHTML = diesMensis(new
+     Date(document.getElementById("newdate").value));
+}
+</script>
+
+
+</body> </html>
